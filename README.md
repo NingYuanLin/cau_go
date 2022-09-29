@@ -1,13 +1,12 @@
 # cau_go
-cau 中国农业大学 校园网认证 golang版本
+cau 中国农业大学 校园网认证 cli golang版本
 ```
 go install github.com/NingYuanLin/cau_go@latest
 ```
 > 请确保$GOPATH/bin在PATH环境变量中
 
-[python版本看这里，安装更简单](https://github.com/NingYuanLin/cau_auth)
-## 功能 & 用途
-使用Cli命令行登录中国农业大学校园网
+[python版本看这里，使用pip安装更简单](https://github.com/NingYuanLin/cau_auth)
+
 ## 使用方法
 ### 1. 创建配置文件
 ```
