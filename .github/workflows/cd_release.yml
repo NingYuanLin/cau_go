@@ -97,7 +97,7 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           # Artifact name
-          name: cau_go-linux-amd64-${{ env.RELEASE_VERSION }}.zip
+          name: cau_go-linux-arm64-${{ env.RELEASE_VERSION }}.zip
           #          name: linux-arm64.zip
 
       - name: Download a Build Artifact
