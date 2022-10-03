@@ -1,4 +1,5 @@
 # cau_go
+![](https://github.com/NingYuanLin/cau_go/actions/workflows/cd_release.yml/badge.svg)  
 cau 中国农业大学 校园网认证 cli golang版本
 ```
 go install github.com/NingYuanLin/cau_go@latest
@@ -42,3 +43,6 @@ shell autocomplete for your application (bash, zsh, fish, powershell)
 1. 新的命令格式，即`command + flag`,这与`git`等工具类似。
 2. 配置文件格式现在为`.yaml`。
 3. 支持shell自动补全。
+
+## 贡献代码
+如果您想贡献代码，请提交pull request到`develop`分支，如果没什么问题，并且改动足以发布一个小版本，我会将`develop`分支合并到`release-*`分支，并发布一个`pre-release`。随后，正式合并到`master`分支，并发布一个新的`release`。
