@@ -1,4 +1,5 @@
 # cau_go
+![](https://github.com/NingYuanLin/cau_go/actions/workflows/cd_release.yml/badge.svg)  
 cau 中国农业大学 校园网认证 cli golang版本
 ```
 go install github.com/NingYuanLin/cau_go@latest
