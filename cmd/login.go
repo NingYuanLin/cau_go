@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"os"
 )
 
 var loginCmd = &cobra.Command{
@@ -57,9 +57,10 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 	} else {
 		// Find home directory.
-		//home, err := os.UserHomeDir()
+		home, err := os.UserHomeDir()
+		// go1.12版本以后，新加入了os.UserHomeDir(),也可以支持交叉编译，就不需要homedir😭了
 		// 使用go-homedir库可以支持交叉编译
-		home, err := homedir.Dir()
+		//home, err := homedir.Dir()
 		//print(home)
 		cobra.CheckErr(err)
 
