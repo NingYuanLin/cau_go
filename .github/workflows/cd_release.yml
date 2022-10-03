@@ -44,6 +44,10 @@ jobs:
 #        run: go build -v ./...
         run: go build -v -o cau_go main.go
 
+      - name: Rename file
+        if: ${{ matrix.goos == 'windows' }}
+        run: mv cau_go cau_go.exe
+
       - name: GetVersion
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
@@ -97,7 +101,7 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           # Artifact name
-          name: cau_go-linux-amd64-${{ env.RELEASE_VERSION }}.zip
+          name: cau_go-linux-arm64-${{ env.RELEASE_VERSION }}.zip
           #          name: linux-arm64.zip
 
       - name: Download a Build Artifact
